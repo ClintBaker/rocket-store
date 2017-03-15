@@ -4,4 +4,6 @@ Rails.application.routes.draw do
 
   root 'items#index'
 
+  get 'techtac', to: 'main#techtac'
+
 end
