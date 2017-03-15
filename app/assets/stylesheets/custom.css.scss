@@ -18,12 +18,24 @@ $navbar-default-bg: #e60000;
   text-decoration: none;
 }
 
-.center {
-  text-align: center;
-}
-
 #jumbo {
   background-image: asset-url('7.jpg');
   background-size: cover;
   height: 580px;
+}
+
+#nav-item li a {
+  color: white;
+}
+
+#products {
+  list-style-type: none;
+}
+
+.center {
+  text-align: center;
+}
+
+.img-custom {
+  height: 600px;
 }

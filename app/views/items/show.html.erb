@@ -1,39 +1,14 @@
-<p id="notice"><%= notice %></p>
+<div class="center">
+  <h3><%= @item.title %></h3>
+  <p><%= link_to "Add to cart", "#" %></p>
+  <%= image_tag("#{@item.image}.jpg", :alt => "tubing anchor catcher", :class => "img-custom img-thumbnail") %>
+  <br />
 
-<p>
-  <strong>Title:</strong>
-  <%= @item.title %>
-</p>
+  <h4>$<%= @item.price %></h4>
+  <p><%= @item.description %></p>
+</div>
 
-<p>
-  <strong>Price:</strong>
-  <%= @item.price %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @item.description %>
-</p>
-
-<p>
-  <strong>Image:</strong>
-  <%= @item.image %>
-</p>
-
-<p>
-  <strong>Image2:</strong>
-  <%= @item.image2 %>
-</p>
-
-<p>
-  <strong>Image3:</strong>
-  <%= @item.image3 %>
-</p>
-
-<p>
-  <strong>Image4:</strong>
-  <%= @item.image4 %>
-</p>
-
-<%= link_to 'Edit', edit_item_path(@item) %> |
-<%= link_to 'Back', items_path %>
+<div align="center">
+  <%= link_to 'Add to cart', '#' %> |
+  <%= link_to 'Back', items_path %>
+</div>

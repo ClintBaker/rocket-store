@@ -1,11 +1,10 @@
-<h2 align="center">Products</h2>
 <div class="container">
-  <ul class="row">
+  <ul class="row" id="products">
     <% @items.each do |item| %>
-      <li class="col-md-6 col-sm-12">
+      <li class="col-lg-4 col-md-6 col-sm-12">
         <div class="">
           <%= link_to item, class: "btn" do %>
-            <%= image_tag("#{item.image}.jpg", :alt => "tubing anchor catcher", :class => "img-custom img-thumbnail") %>
+            <%= image_tag("#{item.image}.jpg", :alt => "tubing anchor catcher", :class => "img img-thumbnail") %>
           <% end %>
           <div class="item-info" align="center">
             <div class="title">
