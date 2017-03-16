@@ -1,5 +1,5 @@
 <%if notice.present? || alert.present? %>
-  <div class="row">
+  <div class="row" align="center">
     <%is_alert = alert.present? ? "alert" : ""%>
       <div data-alert class="alert-box <%=is_alert%>">
         <%=notice || alert%>
