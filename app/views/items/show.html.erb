@@ -1,7 +1,6 @@
 
 <div>
   <h3><%= @item.title %></h3>
-  <p><%= link_to "Add to cart", "#" %></p>
   <%= image_tag("#{@item.image}.jpg", :alt => "tubing anchor catcher", :class => "img-custom img-thumbnail") %>
 
   <div class="row">
@@ -22,9 +21,18 @@
 
 
 <div align="center">
-  <%= link_to 'Add to cart', '#' %> |
   <%= link_to 'Back', items_path %>
 </div>
+
+<%if signed_in?%>
+  <%=link_to "", class: "btn btn-lg", data: {target: @cart_action, addUrl: add_to_cart_path(@item), removeUrl: remove_from_cart_path(@item)} do%>
+    <i class="glyphicon glyphicon-shopping-cart"></i>
+    <span><%=@cart_action%></span> Cart
+  <%end%>
+<%end%>
+<br />
+<br />
+<br />
 
 
 <script>
